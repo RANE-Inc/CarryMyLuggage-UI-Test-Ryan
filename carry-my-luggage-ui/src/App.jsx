@@ -4,6 +4,8 @@ import Dashboard from './assets/Dashboard';
 import Home from './assets/Home';
 import Login from './assets/Login';
 import Signup from './assets/Signup';
+import Locations from './assets/Locations';
+import Cart from './assets/Cart';
 import './App.css';
 import {
   DropdownMenu,
@@ -33,6 +35,11 @@ function App() {
               </DropdownMenuItem>
               <DropdownMenuItem  className="bg-indigo-300">
                 <Button style={{fontSize:"120%" }} variant="secondary"  className="bg-indigo-500">
+                  <Link style={{color:"white"}}to="/Locations">Locations</Link>
+                </Button>
+              </DropdownMenuItem>
+              <DropdownMenuItem  className="bg-indigo-300">
+                <Button style={{fontSize:"120%" }} variant="secondary"  className="bg-indigo-500">
                   <Link style={{color:"white"}}to="/Dashboard">Dashboard</Link>
                 </Button>
               </DropdownMenuItem>
@@ -46,7 +53,9 @@ function App() {
           <Route path="/" element = {<Home/>} />
           <Route path="/Login" element = {<Login/>} />
           <Route path="/Signup" element = {<Signup/>} />
+          <Route path="/Locations" element = {<Locations/>} />
           <Route path="/Dashboard" element = {<Dashboard/>} />
+          <Route path="/Cart" element = {<Cart/>} />
         </Routes>
 
       </div>

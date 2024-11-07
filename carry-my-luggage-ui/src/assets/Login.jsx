@@ -34,9 +34,9 @@ function Login(){
                 />
                 </div>
 
-                <div style={{paddingTop:'5%'}}>
+                <div style={{paddingTop:'8%'}}>
                 <Button style={{fontSize:'150%'}} variant="secondary"  className="bg-indigo-500" type='submit'>
-                    <Link style={{color:"white"}} to='/Dashboard'>Login</Link>
+                    <Link style={{color:"white"}} to='/Locations'>Login</Link>
                 </Button>
                 </div>
             </form>
