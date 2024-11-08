@@ -1,20 +1,37 @@
 import React from 'react';
 import { Button } from "../components/ui/button";
-import {Link} from 'react-router-dom';
+import DropMyMenu from '../components/ui/dropMyMenu';
 
 
 function Cart(){
 
-    return(
-        <div style={{fontFamily:'Kanit', position:"fixed", top:"20%", left:'45%'}}>
-            <div style={{fontSize:"250%"}}>
-                Cart
-            </div>
-            <div style={{fontSize:"250%"}}>
-                Screen    
-            </div>
-            <div className="grid grid-cols-1" style={{paddingTop:'15%'}}>
+    const cart = {cartNum:'1' ,airport:'', battery: 50, status:'Moving To', Location:'Gate 1', timeRem:30};
 
+    return(
+
+        <div>
+            <DropMyMenu/>
+
+            <div style={{fontFamily:'Kanit', position:"fixed", top:"20%", left:'40%'}}>
+                <div>
+                    <Button style={{fontSize:'150%', color:"white"}} variant="secondary"  className="bg-indigo-500"> 
+                        Cart {cart.cartNum}
+                    </Button>
+                </div>
+                <div className="grid grid-cols-1" style={{paddingTop:'10%', fontFamily:'Kanit', fontSize:'150%'}}>
+                    <div>
+                        Airport: {cart.airport}
+                    </div>
+                    <div>
+                        Battery: {cart.battery}
+                    </div>
+                    <div>
+                        Status: {cart.status} {cart.Location}
+                    </div>
+                    <div>
+                        Time Remaining: {cart.timeRem} Minutes
+                    </div>
+                </div>
             </div>
         </div>
     );

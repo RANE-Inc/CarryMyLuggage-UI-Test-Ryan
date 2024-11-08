@@ -7,6 +7,7 @@ import {Card,
     CardTitle,} from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import {Link} from 'react-router-dom';
+import DropMyMenu from '../components/ui/dropMyMenu';
 
 
 function Locations(){
@@ -21,23 +22,26 @@ function Locations(){
     ];
 
     return(
-        
-        <div style={{position:"fixed", top:"8%", left:"15%"}} className="grid sm:grid-cols-3 md:grid-cols-5 gap-12 p-4">
-            {airports.map((airport) =>
-                <div className='max-w-xs text-left'>
-                    <Card className="bg-indigo-300 h-[150px] w-[115%]">
-                        <CardTitle style={{paddingLeft:"7%", paddingTop:"3%", fontSize:"160%"}}>{airport.location}</CardTitle>
-                        <CardContent style={{paddingTop:"3%", paddingBottom:"1%", fontSize:"110%"}}>Code: {airport.airportCode} </CardContent>
-                        <CardContent style={{paddingBottom:"2%", fontSize:"110%"}}>Carts: {airport.numberOfCarts} </CardContent>
-                        <div style={{paddingLeft:'4%'}}>
-                            <Button style={{fontSize:'100%', paddingLeft:''}} variant="secondary"  className="bg-indigo-500" type='submit'>
-                                <Link style={{color:"white" }} to='/Dashboard'>Select</Link>
-                            </Button>
-                        </div>
-                    </Card>
-                </div>
-            )}
+        <div>
+            <DropMyMenu/>
 
+            <div style={{position:"fixed", top:"8%", left:"15%"}} className="grid sm:grid-cols-3 md:grid-cols-5 gap-12 p-4">
+                {airports.map((airport) =>
+                    <div className='max-w-xs text-left'>
+                        <Card className="bg-indigo-300 h-[150px] w-[115%]">
+                            <CardTitle style={{paddingLeft:"7%", paddingTop:"3%", fontSize:"160%"}}>{airport.location}</CardTitle>
+                            <CardContent style={{paddingTop:"3%", paddingBottom:"1%", fontSize:"110%"}}>Code: {airport.airportCode} </CardContent>
+                            <CardContent style={{paddingBottom:"2%", fontSize:"110%"}}>Carts: {airport.numberOfCarts} </CardContent>
+                            <div style={{paddingLeft:'4%'}}>
+                                <Button style={{fontSize:'100%', paddingLeft:''}} variant="secondary"  className="bg-indigo-500" type='submit'>
+                                    <Link style={{color:"white" }} to='/Dashboard'>Select</Link>
+                                </Button>
+                            </div>
+                        </Card>
+                    </div>
+                )}
+
+            </div>
         </div>
     );
 }
