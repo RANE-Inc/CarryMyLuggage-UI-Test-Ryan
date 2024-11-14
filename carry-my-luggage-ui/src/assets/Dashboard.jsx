@@ -6,7 +6,6 @@ import {Card,
     CardHeader,
     CardTitle,} from "../components/ui/card";
 import { Button } from "../components/ui/button";
-import {Link} from 'react-router-dom';
 import DropMyMenu from '../components/ui/dropMyMenu';
 
 
@@ -36,7 +35,7 @@ function Dashboard(){
                             <CardContent style={{paddingBottom:"2%", fontSize:"110%"}}>Status: {cart.status} {cart.location} {'('}{cart.TimeRem}{' Minutes)'}</CardContent>
                             <div style={{paddingLeft:'6%'}}>
                                 <Button style={{fontSize:'100%', paddingLeft:''}} variant="secondary"  className="bg-indigo-500" type='submit'>
-                                    <Link style={{color:"white"}} to='/Cart'>Select Cart</Link>
+                                    <a style={{color:"white"}} href='/Cart.jsx'>Select Cart</a>
                                 </Button>
                             </div>
                         </Card>

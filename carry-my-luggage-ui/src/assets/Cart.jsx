@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from "../components/ui/button";
 import DropMyMenu from '../components/ui/dropMyMenu';
-import {Link} from 'react-router-dom';
 import {Card,
     CardContent,
     CardDescription,
@@ -36,9 +35,9 @@ function Cart(){
                 </CardContent>
                 <div style={{paddingTop:'10%', paddingBottom:'5%'}}>
                     <Button style={{fontSize:'150%', color:"white"}} variant="secondary"  className="bg-indigo-500">
-                        <Link style={{color:"white"}} to="/ScheduleCart">
+                        <a style={{color:"white"}} href="/ScheduleCart.jsx">
                             Schedule Cart {cart.cartNum}
-                        </Link>
+                        </a>
                     </Button>
                 </div>
             </Card>

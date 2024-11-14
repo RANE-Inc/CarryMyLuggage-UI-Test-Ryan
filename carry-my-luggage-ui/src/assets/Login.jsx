@@ -1,7 +1,6 @@
 import React from 'react';
 import{ useState } from 'react';
 import { Button } from "../components/ui/button";
-import {Link} from 'react-router-dom';
 
 
 function Login(){
@@ -36,7 +35,7 @@ function Login(){
 
                 <div style={{paddingTop:'8%'}}>
                 <Button style={{fontSize:'150%'}} variant="secondary"  className="bg-indigo-500" type='submit'>
-                    <Link style={{color:"white"}} to='/Locations'>Login</Link>
+                    <a style={{color:"white"}} href='/Locations.jsx'>Login</a>
                 </Button>
                 </div>
             </form>

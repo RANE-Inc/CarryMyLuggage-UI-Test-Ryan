@@ -6,7 +6,6 @@ import {Card,
     CardHeader,
     CardTitle,} from "../components/ui/card";
 import { Button } from "../components/ui/button";
-import {Link} from 'react-router-dom';
 import DropMyMenu from '../components/ui/dropMyMenu';
 
 
@@ -25,7 +24,7 @@ function Locations(){
         <div>
             <DropMyMenu/>
 
-            <div style={{position:"fixed", top:"8%", left:"15%"}} className="grid sm:grid-cols-3 md:grid-cols-5 gap-12 p-4">
+            <div style={{position:"fixed", top:"8%", left:"15%"}} className="grid sm:grid-cols-3 md:grid-cols-4 gap-12 p-4">
                 {airports.map((airport) =>
                     <div className='max-w-xs text-left'>
                         <Card className="bg-indigo-300 h-[150px] w-[115%]">
@@ -34,7 +33,7 @@ function Locations(){
                             <CardContent style={{paddingBottom:"2%", fontSize:"110%"}}>Carts: {airport.numberOfCarts} </CardContent>
                             <div style={{paddingLeft:'4%'}}>
                                 <Button style={{fontSize:'100%', paddingLeft:''}} variant="secondary"  className="bg-indigo-500" type='submit'>
-                                    <Link style={{color:"white" }} to='/Dashboard'>Select</Link>
+                                    <a style={{color:"white" }} href='/Dashboard.jsx'>Select</a>
                                 </Button>
                             </div>
                         </Card>

@@ -7,7 +7,6 @@ import {
     DropdownMenuTrigger,
   } from "./dropdown-menu";
 import { Button } from "./button";
-import {Link} from 'react-router-dom';
 
 function DropMyMenu(){
 
@@ -18,17 +17,17 @@ function DropMyMenu(){
           <DropdownMenuContent style={{fontSize:"125%" }}  className="bg-indigo-300">
               <DropdownMenuItem  className="bg-indigo-300">
                 <Button style={{fontSize:"120%" }} variant="secondary"  className="bg-indigo-500">
-                  <Link style={{color:"white"}}to="/Locations">Locations</Link>
+                  <a style={{color:"white"}} href="/Locations.jsx">Locations</a>
                 </Button>
               </DropdownMenuItem>
               <DropdownMenuItem  className="bg-indigo-300">
                 <Button style={{fontSize:"120%" }} variant="secondary"  className="bg-indigo-500">
-                  <Link style={{color:"white"}}to="/Dashboard">Dashboard</Link>
+                  <a style={{color:"white"}} href="/Dashboard.jsx">Dashboard</a>
                 </Button>
               </DropdownMenuItem>
               <DropdownMenuItem  className="bg-indigo-300">
                 <Button style={{fontSize:"120%" }} variant="secondary"  className="bg-indigo-500">
-                  <Link style={{color:"white"}} to="/">Sign Out</Link>
+                  <a style={{color:"white"}} href="/Home.jsx">Sign Out</a>
                 </Button>
               </DropdownMenuItem>
           </DropdownMenuContent>
