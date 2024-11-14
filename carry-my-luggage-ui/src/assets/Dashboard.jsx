@@ -23,7 +23,11 @@ function Dashboard(){
         <div>
             <DropMyMenu/>
 
-            <div style={{position:"fixed", top:"8%", left:"15%"}} className="grid sm:grid-cols-2 md:grid-cols-4 gap-12 p-4">
+            <div style={{position:"fixed", top:"2%", left:"45%", fontSize:'250%'}}>
+                Airport Name
+            </div>
+
+            <div style={{position:"fixed", top:"9%", left:"17%"}} className="grid sm:grid-cols-2 md:grid-cols-3 gap-12 p-4">
                 {luggageCarts.map((cart) =>
                     <div className='max-w-xs text-left'>
                         <Card className="bg-indigo-300 h-[160px] w-[360px]">
